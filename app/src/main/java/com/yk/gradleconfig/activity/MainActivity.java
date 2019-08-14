@@ -1,5 +1,6 @@
-package com.yk.gradleconfig;
+package com.yk.gradleconfig.activity;
 
+import com.yk.gradleconfig.R;
 import com.yk.gradleconfig.base.BaseActivity;
 import com.yk.gradleconfig.base.BasePresenter;
 import com.yk.gradleconfig.base.ChatControler;

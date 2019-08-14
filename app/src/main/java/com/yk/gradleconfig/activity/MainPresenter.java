@@ -1,4 +1,4 @@
-package com.yk.gradleconfig;
+package com.yk.gradleconfig.activity;
 
 import android.content.Context;
 
