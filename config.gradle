@@ -3,13 +3,14 @@ ext {
     def supportVersion = '25.0.0'
     def constraintLayout="1.1.3"
     def multidexVersion = '1.0.1'
-    def rxjavaVersion = '1.3.0'
-    def rxandroidVersion = '1.2.1'
-    def retrofitVersion = '2.1.0'
+    def rxjavaVersion = '2.1.11'
+    def rxandroidVersion = '2.0.2'
+    def retrofitVersion = '2.3.0'
+    def cookieJarVersion = 'v1.0.1'
     def designVersion = '26.0.0-alpha1'
     def okhttpVersion = '3.8.1'
     def gsonVersion = '2.8.4'
-    def glideVersion = '3.8.0'
+    def glideVersion = '4.9.0'
     def zxingVersion = '3.3.0'
     def pinyinVersion = '2.0.3'
     def recyclerViewHelperVersion = '2.9.25'
@@ -52,13 +53,15 @@ ext {
                                constraint_layout       :  "com.android.support.constraint:constraint-layout:${constraintLayout}",
                                // multidex
                                multidex                : "com.android.support:multidex:${multidexVersion}",
+
                                // RxJava相关
-                               rxjava                  : "io.reactivex:rxjava:${rxjavaVersion}",
-                               rxandroid               : "io.reactivex:rxandroid:${rxandroidVersion}",
+                               rxjava                  : "io.reactivex.rxjava2:rxjava:${rxjavaVersion}",
+                               rxandroid               : "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}",
                                // retrofit相关
                                retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
                                retrofit_rxjava         : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
                                retrofit_gson           : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+                               cookiejar               :  "com.github.franmontiel:PersistentCookieJar:${cookieJarVersion}",
                                // okhttp
                                okhttp                  : "com.squareup.okhttp3:okhttp:${okhttpVersion}",
                                okhttp_logging          : "com.squareup.okhttp3:logging-interceptor:${okhttpVersion}",
