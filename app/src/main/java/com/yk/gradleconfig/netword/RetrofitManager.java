@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -18,14 +18,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitManager {
 
     public static DateService mDateService;
-    public static String baseUrl = "";
+    public static String baseUrl = "https://www.apiopen.top";
 
     public static DateService getService() {
         if (mDateService == null) {
             Retrofit build = new Retrofit.Builder()
                     .baseUrl(baseUrl)
                     .client(initHttpClient())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             mDateService = build.create(DateService.class);

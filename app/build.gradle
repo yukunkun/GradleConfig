@@ -4,7 +4,6 @@ android {
     def appDependencies = rootProject.ext.android
 
     compileSdkVersion appDependencies.compileSdkVersion
-    buildToolsVersion appDependencies.buildToolsVersion
 
     defaultConfig {
         applicationId appDependencies.applicationId
@@ -40,9 +39,9 @@ android {
     }
     //多渠道打包
     productFlavors {
-        xiaomi{}
-        baidu{}
-        wandoujia{}
+        xiaomi {}
+        baidu {}
+        wandoujia {}
     }
 
     productFlavors.all {
@@ -68,6 +67,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     debugImplementation developmentDependencies.leakcanary_android
     releaseImplementation developmentDependencies.leakcanary_android_no_op
     implementation developmentDependencies.support_appcompat_v7
@@ -76,9 +76,9 @@ dependencies {
     implementation developmentDependencies.support_design
     implementation developmentDependencies.support_cardview_v7
     implementation developmentDependencies.constraint_layout
-//    implementation(developmentDependencies.glide) {
-//        exclude group: "com.android.support"
-//    }
+    implementation(developmentDependencies.glide) {
+        exclude group: "com.android.support"
+    }
     implementation developmentDependencies.jsoup
     implementation developmentDependencies.commons_text
     implementation developmentDependencies.crop
@@ -86,12 +86,11 @@ dependencies {
     implementation developmentDependencies.smartrefresh
     implementation developmentDependencies.smartrefresheader
     implementation developmentDependencies.rxjava
+    implementation developmentDependencies.retrofit_java2
     implementation developmentDependencies.rxandroid
     implementation developmentDependencies.retrofit
-    implementation developmentDependencies.retrofit_rxjava
     implementation developmentDependencies.retrofit_gson
     implementation developmentDependencies.cookiejar
-    implementation developmentDependencies.glide
     implementation developmentDependencies.okhttp
     implementation developmentDependencies.okhttp_logging
 

@@ -44,6 +44,10 @@ ext {
     ]
 
     // 开发依赖
+
+    testDependencies = [junit          : "junit:junit:${junitVersion}",
+                        mockito        : "org.mockito:mockito-core:${mockitoVersion}",
+                        mockito_android: "org.mockito:mockito-android:${mockitoVersion}"]
     developmentDependencies = [// Android support library
                                support_appcompat_v7    : "com.android.support:appcompat-v7:${supportVersion}",
                                support_v4              : "com.android.support:support-v4:${supportVersion}",
@@ -59,7 +63,7 @@ ext {
                                rxandroid               : "io.reactivex.rxjava2:rxandroid:${rxandroidVersion}",
                                // retrofit相关
                                retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
-                               retrofit_rxjava         : "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+                               retrofit_java2          : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
                                retrofit_gson           : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
                                cookiejar               :  "com.github.franmontiel:PersistentCookieJar:${cookieJarVersion}",
                                // okhttp
@@ -98,10 +102,6 @@ ext {
                                smartrefresh            : "com.scwang.smartrefresh:SmartRefreshLayout:${smartrefreshVersion}",
                                smartrefresheader       : "com.scwang.smartrefresh:SmartRefreshHeader:${smartrefreshVersion}",
     ]
-
-    testDependencies = [junit          : "junit:junit:${junitVersion}",
-                        mockito        : "org.mockito:mockito-core:${mockitoVersion}",
-                        mockito_android: "org.mockito:mockito-android:${mockitoVersion}"]
 
     // 测试依赖
     testDependencies = [junit            : "junit:junit:4.12",
