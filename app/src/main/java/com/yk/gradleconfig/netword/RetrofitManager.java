@@ -19,7 +19,7 @@ public class RetrofitManager {
 
     public static DateService mDateService;
     public static String baseUrl = "https://www.apiopen.top";
-     
+
     public static DateService getService() {
         if (mDateService == null) {
             Retrofit build = new Retrofit.Builder()
