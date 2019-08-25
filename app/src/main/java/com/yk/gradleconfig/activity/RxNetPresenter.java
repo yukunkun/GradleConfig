@@ -51,6 +51,7 @@ public class RxNetPresenter extends RxNetControler.Presenter {
                         mView.getWeatherRx(weatherResponse1.getData());
                     }
 
+                    
                     @Override
                     public void onError(Throwable e) {
 
