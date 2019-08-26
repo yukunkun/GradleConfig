@@ -1,7 +1,6 @@
 package com.yk.gradleconfig.activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,16 +16,11 @@ public class RxNetActivity extends BaseActivity implements RxNetControler.View {
     private TextView mTextView;
     private TextView mTvRx;
     private RxNetPresenter mRxNetPresenter;
+    private Button mButton;
 
     public static void start(Context context){
         Intent intent=new Intent(context,RxNetActivity.class);
         context.startActivity(intent);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rx_net);
     }
 
     @Override
@@ -44,7 +38,7 @@ public class RxNetActivity extends BaseActivity implements RxNetControler.View {
         mRxNetPresenter= (RxNetPresenter) mPresenter;
         mTextView = (TextView) findViewById(R.id.tv);
         mTvRx = (TextView) findViewById(R.id.tv_rx);
-        mTextView.setText("服务");
+        mButton = (Button) findViewById(R.id.bt_start);
     }
 
     @Override
@@ -60,15 +54,13 @@ public class RxNetActivity extends BaseActivity implements RxNetControler.View {
     @Override
     public void getWeather(Weather weather) {
         LogUtil.i(weather.toString());
-//        mTextView.setText("retroft"+weather.toString()+"");
-        mTextView.setText(weather.getWendu());
+        mTextView.setText("retroft:"+weather.toString());
     }
 
     @Override
     public void getWeatherRx(Weather weather) {
-//        mTvRx.setText("rx："+weatherring()+"");
+        mTvRx.setText("rx："+weather.toString()+"");
         LogUtil.i(weather.toString());
-        mTvRx.setText("456");
     }
 
     public void start(View view) {
