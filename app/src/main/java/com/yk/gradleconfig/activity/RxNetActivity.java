@@ -2,6 +2,8 @@ package com.yk.gradleconfig.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.yk.gradleconfig.R;
@@ -12,7 +14,8 @@ import com.yk.gradleconfig.utils.log.LogUtil;
 
 public class RxNetActivity extends BaseActivity implements RxNetControler.View {
 
-    private TextView mTextView,mTvRx;
+    private TextView mTextView;
+    private TextView mTvRx;
     private RxNetPresenter mRxNetPresenter;
 
     public static void start(Context context){
@@ -41,6 +44,7 @@ public class RxNetActivity extends BaseActivity implements RxNetControler.View {
         mRxNetPresenter= (RxNetPresenter) mPresenter;
         mTextView = (TextView) findViewById(R.id.tv);
         mTvRx = (TextView) findViewById(R.id.tv_rx);
+        mTextView.setText("服务");
     }
 
     @Override
@@ -50,20 +54,24 @@ public class RxNetActivity extends BaseActivity implements RxNetControler.View {
 
     @Override
     public void initDate() {
-        mRxNetPresenter.getWeather("成都");
+//        mRxNetPresenter.getWeather("成都");
     }
 
     @Override
     public void getWeather(Weather weather) {
         LogUtil.i(weather.toString());
 //        mTextView.setText("retroft"+weather.toString()+"");
-        mTextView.setText("456");
+        mTextView.setText(weather.getWendu());
     }
 
     @Override
     public void getWeatherRx(Weather weather) {
-//        mTvRx.setText("rx："+weather.toString()+"");
-        mTextView.setText("456");
+//        mTvRx.setText("rx："+weatherring()+"");
+        LogUtil.i(weather.toString());
+        mTvRx.setText("456");
+    }
 
+    public void start(View view) {
+        mRxNetPresenter.getWeather("成都");
     }
 }
