@@ -1,0 +1,11 @@
+diff a/gradle/wrapper/gradle-wrapper.properties b/gradle/wrapper/gradle-wrapper.properties	(rejected hunks)
+@@ -3,4 +3,8 @@
+  distributionPath=wrapper/dists
+  zipStoreBase=GRADLE_USER_HOME
+  zipStorePath=wrapper/dists
+- distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip
+++<<<<<<< HEAD
++ distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip
+++=======
+++distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip
+++>>>>>>> 2fad3495d0dc0be5b1da5020c18ab6a062c18748
