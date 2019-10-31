@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.yk.gradleconfig.R;
 import com.yk.gradleconfig.base.BaseActivity;
 import com.yk.gradleconfig.base.BasePresenter;
@@ -48,7 +47,7 @@ public class RxNetActivity extends BaseActivity implements RxNetControler.View {
 
     @Override
     public void initDate() {
-//        mRxNetPresenter.getWeather("成都");
+
     }
 
     @Override

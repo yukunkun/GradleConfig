@@ -16,6 +16,6 @@ public interface DateService {
     @GET("/weatherApi")
     Call<Response1<Weather>> getWeather(@Query("city") String city);
 
-    @GET("/weatherApi")
+    @GET("https://www.apiopen.top/weatherApi")
     Observable<Response1<Weather>> getWeatherRx(@Query("city") String city);
 }

@@ -93,6 +93,6 @@ dependencies {
     implementation developmentDependencies.cookiejar
     implementation developmentDependencies.okhttp
     implementation developmentDependencies.okhttp_logging
-
+    implementation developmentDependencies.flyco
 
 }

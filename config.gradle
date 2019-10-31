@@ -10,7 +10,7 @@ ext {
     def designVersion = '26.0.0-alpha1'
     def okhttpVersion = '3.8.1'
     def gsonVersion = '2.8.4'
-    def glideVersion = '4.9.0'
+    def glideVersion = '3.8.0'
     def zxingVersion = '3.3.0'
     def pinyinVersion = '2.0.3'
     def recyclerViewHelperVersion = '2.9.25'
@@ -27,6 +27,7 @@ ext {
     def eventbusVersion = '3.1.1'
     def progressVersion = '1.7'
     def smartrefreshVersion = '1.1.0-alpha-5'
+    def flyso='FlycoTabLayout_Lib:2.1.2@aar'
     //默认版本号和版本名
     def DEF_VERSION_CODE = 2
     def DEF_VERSION_NAME = "1.0.1"
@@ -101,6 +102,8 @@ ext {
                                eventbus                : "org.greenrobot:eventbus:${eventbusVersion}",
                                smartrefresh            : "com.scwang.smartrefresh:SmartRefreshLayout:${smartrefreshVersion}",
                                smartrefresheader       : "com.scwang.smartrefresh:SmartRefreshHeader:${smartrefreshVersion}",
+                               flyco                   : "com.flyco.tablayout:${flyso}",
+
     ]
 
     // 测试依赖

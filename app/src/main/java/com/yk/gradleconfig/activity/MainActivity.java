@@ -1,5 +1,8 @@
 package com.yk.gradleconfig.activity;
 
+import android.location.Location;
+import android.location.LocationListener;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
@@ -7,6 +10,8 @@ import com.yk.gradleconfig.R;
 import com.yk.gradleconfig.base.BaseActivity;
 import com.yk.gradleconfig.base.BasePresenter;
 import com.yk.gradleconfig.base.ChatControler;
+import com.yk.gradleconfig.utils.CityPosition;
+import com.yk.gradleconfig.utils.log.LogUtil;
 
 public class MainActivity extends BaseActivity implements ChatControler.View, View.OnClickListener {
 
@@ -48,6 +53,28 @@ public class MainActivity extends BaseActivity implements ChatControler.View, Vi
 
     }
 
+    public class LocListener implements LocationListener {
+        @Override
+        public void onLocationChanged(Location location) {
+            String city = CityPosition.changeToCity(location.getLatitude(), location.getLongitude());
+        }
+
+        @Override
+        public void onStatusChanged(String s, int i, Bundle bundle) {
+        }
+
+        @Override
+        public void onProviderEnabled(String s) {
+            LogUtil.i("----city", "onProviderEnabled");
+        }
+
+        @Override
+        public void onProviderDisabled(String s) {
+            LogUtil.i("----city", "onProviderDisabled");
+        };
+
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -55,6 +82,7 @@ public class MainActivity extends BaseActivity implements ChatControler.View, Vi
                 RxNetActivity.start(this);
                 break;
             case R.id.bt_2:
+                CommentTablayoutActivity.start(this);
                 break;
             case R.id.bt_3:
                 break;
