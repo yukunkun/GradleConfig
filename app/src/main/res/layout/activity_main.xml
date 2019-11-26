@@ -13,12 +13,17 @@
        android:layout_height="wrap_content" />
    <Button
        android:id="@+id/bt_2"
-       android:text="rxText"
+       android:text="Tablayout"
        android:layout_width="match_parent"
        android:layout_height="wrap_content" />
    <Button
        android:id="@+id/bt_3"
-       android:text="rxText"
+       android:text="PicGally"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+   <Button
+       android:id="@+id/bt_4"
+       android:text="Drag"
        android:layout_width="match_parent"
        android:layout_height="wrap_content" />
 </LinearLayout>

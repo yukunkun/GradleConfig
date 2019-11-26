@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="header">
+        <item>首页</item>
+        <item>推荐</item>
+        <item>音乐</item>
+        <item>小说</item>
+        <item>话剧</item>
+        <item>美图</item>
+        <item>美剧</item>
+        <item>动画</item>
+        <item>动漫</item>
+        <item>综艺</item>
+        <item>搞笑</item>
+        <item>电影</item>
+        <item>电视</item>
+        <item>明星</item>
+        <item>直播</item>
+        <item>好看</item>
+        <item>圈子</item>
+    </string-array>
+    <string-array name="footer">
+        <item>相声</item>
+        <item>恐怖</item>
+    </string-array>
+</resources>

@@ -18,7 +18,7 @@ public class MainActivity extends BaseActivity implements ChatControler.View, Vi
     private Button mButton1;
     private Button mButton2;
     private Button mButton3;
-
+    private Button mButton4;
     @Override
     protected BasePresenter createPresenter() {
         return new MainPresenter(this,this);
@@ -34,6 +34,7 @@ public class MainActivity extends BaseActivity implements ChatControler.View, Vi
         mButton1 = (Button) findViewById(R.id.bt_1);
         mButton2 = (Button) findViewById(R.id.bt_2);
         mButton3 = (Button) findViewById(R.id.bt_3);
+        mButton4 = (Button) findViewById(R.id.bt_4);
     }
 
     @Override
@@ -41,6 +42,7 @@ public class MainActivity extends BaseActivity implements ChatControler.View, Vi
         mButton1.setOnClickListener(this);
         mButton2.setOnClickListener(this);
         mButton3.setOnClickListener(this);
+        mButton4.setOnClickListener(this);
     }
 
     @Override
@@ -50,28 +52,6 @@ public class MainActivity extends BaseActivity implements ChatControler.View, Vi
 
     @Override
     public void getMessage(String msg) {
-
-    }
-
-    public class LocListener implements LocationListener {
-        @Override
-        public void onLocationChanged(Location location) {
-            String city = CityPosition.changeToCity(location.getLatitude(), location.getLongitude());
-        }
-
-        @Override
-        public void onStatusChanged(String s, int i, Bundle bundle) {
-        }
-
-        @Override
-        public void onProviderEnabled(String s) {
-            LogUtil.i("----city", "onProviderEnabled");
-        }
-
-        @Override
-        public void onProviderDisabled(String s) {
-            LogUtil.i("----city", "onProviderDisabled");
-        };
 
     }
 
@@ -85,6 +65,10 @@ public class MainActivity extends BaseActivity implements ChatControler.View, Vi
                 CommentTablayoutActivity.start(this);
                 break;
             case R.id.bt_3:
+                RVActivity.start(this);
+                break;
+            case R.id.bt_4:
+                DragActivity.start(this);
                 break;
         }
     }
